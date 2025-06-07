@@ -7,6 +7,7 @@ RUN groupadd -r jasmin && useradd -r -g jasmin jasmin
 
 # Install requirements
 RUN apt-get update && apt-get install -y \
+    git \
     libffi-dev \
     libssl-dev \
     rabbitmq-server \
