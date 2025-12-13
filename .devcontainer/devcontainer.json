@@ -1,0 +1,21 @@
+{
+    "name": "jasmin-sms-gateway",
+    "build": {
+      "dockerfile": "../docker/Dockerfile.devcontainer",
+      "context": ".." 
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ]
+      }
+    },
+    "workspaceMount": "source=${localWorkspaceFolder}/jasmin,target=/opt/jasmin-sms-gateway,type=bind",
+    "workspaceFolder": "/opt/jasmin-sms-gateway",
+    "containerEnv": {
+      "LOGLEVEL": "INFO"
+    },
+    "overrideCommand": false
+  }
